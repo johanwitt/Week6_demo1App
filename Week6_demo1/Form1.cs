@@ -38,5 +38,24 @@ namespace Week6_demo1
             
 
         }
+
+        private void buttonSelect_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string SqlCmd = "SELECT * FROM Stud_details";
+
+            SqlCommand cmd = new SqlCommand( SqlCmd, conn);
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Console.WriteLine(String.Format("{0}", reader[0]));
+                }
+            }
+
+            MessageBox.Show("Select done!");
+        }
     }
 }
