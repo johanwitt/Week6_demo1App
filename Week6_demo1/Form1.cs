@@ -22,12 +22,13 @@ namespace Week6_demo1
             Initial Catalog=Student;Integrated Security=True;");
             
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // submit button
         {
             conn.Open();
 
             // Insert into Stud_details values (ID_textBox.Text, Name_textBox.Text..)
-            string SqlCmd = "Insert into Stud_details values('" + ID_textBox.Text + "','" + Name_textBox.Text + "','" + DOB_textBox.Text + "','" + Address_textBox.Text + "','" + Phone_textBox.Text + "')";
+            string SqlCmd = "Insert into Stud_details values('" + ID_textBox.Text + "','" + Name_textBox.Text + "','" 
+                + DOB_textBox.Text + "','" + Address_textBox.Text + "','" + Phone_textBox.Text + "')";
             
             SqlCommand cmd = new SqlCommand(SqlCmd, conn);
 
@@ -41,21 +42,14 @@ namespace Week6_demo1
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
-            conn.Open();
-
-            string SqlCmd = "SELECT * FROM Stud_details";
-
-            SqlCommand cmd = new SqlCommand( SqlCmd, conn);
-
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}", reader[0], reader[1], reader[2], reader[3], reader[4]));
-                }
-            }
-
-            MessageBox.Show("Select done!");
+            
+            // access new form ReportTabl
+            ReportTabl reportTabl = new ReportTabl();
+            reportTabl.Show();
+            
+            
+            
+            
         }
     }
 }

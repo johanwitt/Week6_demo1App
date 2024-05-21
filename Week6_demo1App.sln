@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6_demo1", "Week6_demo1\Week6_demo1.csproj", "{93F47F68-025B-4543-BEDA-5E5CEC0B2A4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormCarSales", "WinFormCarSales\WinFormCarSales.csproj", "{3D895C8A-5018-4673-AA60-7710E50D2106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93F47F68-025B-4543-BEDA-5E5CEC0B2A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F47F68-025B-4543-BEDA-5E5CEC0B2A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F47F68-025B-4543-BEDA-5E5CEC0B2A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D895C8A-5018-4673-AA60-7710E50D2106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D895C8A-5018-4673-AA60-7710E50D2106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D895C8A-5018-4673-AA60-7710E50D2106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D895C8A-5018-4673-AA60-7710E50D2106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
