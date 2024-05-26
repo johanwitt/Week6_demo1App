@@ -63,7 +63,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(53, 114);
+            label2.Location = new Point(53, 199);
             label2.Name = "label2";
             label2.Size = new Size(54, 21);
             label2.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             // textBoxModel
             // 
-            textBoxModel.Location = new Point(122, 112);
+            textBoxModel.Location = new Point(122, 197);
             textBoxModel.Name = "textBoxModel";
             textBoxModel.Size = new Size(206, 23);
             textBoxModel.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(53, 191);
+            label3.Location = new Point(53, 122);
             label3.Name = "label3";
             label3.Size = new Size(48, 21);
             label3.TabIndex = 5;
@@ -88,7 +88,7 @@
             // 
             // textBoxMake
             // 
-            textBoxMake.Location = new Point(122, 189);
+            textBoxMake.Location = new Point(122, 120);
             textBoxMake.Name = "textBoxMake";
             textBoxMake.Size = new Size(206, 23);
             textBoxMake.TabIndex = 4;
@@ -148,6 +148,7 @@
             buttonShow.TabIndex = 11;
             buttonShow.Text = "Show";
             buttonShow.UseVisualStyleBackColor = true;
+            buttonShow.Click += buttonShow_Click;
             // 
             // FormCarSales
             // 

@@ -24,13 +24,29 @@ namespace Week6_demo1
 
         private void button1_Click(object sender, EventArgs e) // submit button
         {
+            string Id = ID_textBox.Text;
+            string name = Name_textBox.Text;
+            string Dob = DOB_textBox.Text;
+            string address = Address_textBox.Text;
+            string phone = Phone_textBox.Text;
+
             conn.Open();
 
             // Insert into Stud_details values (ID_textBox.Text, Name_textBox.Text..)
-            string SqlCmd = "Insert into Stud_details values('" + ID_textBox.Text + "','" + Name_textBox.Text + "','" 
-                + DOB_textBox.Text + "','" + Address_textBox.Text + "','" + Phone_textBox.Text + "')";
-            
+            //string SqlCmd = "Insert into Stud_details values('" + ID_textBox.Text + "','" + Name_textBox.Text + "','"
+            //    + DOB_textBox.Text + "','" + Address_textBox.Text + "','" + Phone_textBox.Text + "')";
+
+            string SqlCmd = $"Insert into Stud_details values (@Id, @name, @Dob, @address, @phone)";
+
             SqlCommand cmd = new SqlCommand(SqlCmd, conn);
+
+            // cmd parameter block
+
+            cmd.Parameters.AddWithValue("@Id", Id);
+            cmd.Parameters.AddWithValue ("@name", name);
+            cmd.Parameters.AddWithValue("@Dob", Dob);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@phone", phone);
 
             cmd.ExecuteNonQuery();
             conn.Close();
